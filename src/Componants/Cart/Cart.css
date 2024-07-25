@@ -1,0 +1,100 @@
+.cart-item-wrapper{
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.cart-item-wrapper h2{
+    font-size: 16px;
+    padding: 8px;
+    color: #fff;
+    background-color: #2f4f4f;
+
+}
+.recent{
+    max-width: 436px;
+}
+
+.cart-items{
+    flex: 1 1 320px;
+}
+div.cart-items > .cart-itemsList:nth-child(2){
+ border-top: none;
+}
+
+
+div.card-item-heading,
+div.card-item-bottom{
+    background-color: #2f4f4f;
+    color: #fff;
+    border-top: none;
+    padding: 8px;
+}
+
+.card-item-heading > div,
+.card-item-bottom > div {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card-item-bottom .card-item-img{
+    width: 150px;
+}
+.cart-itemsList{
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px dotted #858282;
+    align-items: center;
+}
+.cart-itemsList input {
+    display: block;
+    width: 30px;
+    height: 24px;
+    padding: 4px;
+    margin: auto;
+   
+}
+.card-item-img{
+    width: 100px;
+    position: relative;
+}
+.card-item-img .remove{
+    position: absolute;
+    top: -6px;
+    right: -6px;
+}
+.cart-itemsList > .prize{
+    min-width: 80px;
+    font-size: 12px;
+    font-weight: 700;
+    
+}
+.cart-itemsList  .quentity{
+    min-width: 68px;
+}
+
+.cart-items .product-card{
+    width: 100px;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 2px;
+}
+
+.cart-items .product-card .prize{
+    font-size: 20px;
+}
+
+.ckeckout{
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .cart-item-wrapper{
+        flex-direction: column;
+    }
+
+    .recent{
+        max-width: 100%;
+    }
+}

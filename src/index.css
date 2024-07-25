@@ -1,0 +1,92 @@
+
+
+:root{
+  --footer-bg-color: #c58877;
+  --background-header: #9b6150;
+  --heading-color: #9b6150;
+  --footer-color:#fff;
+  --footer-hover-color: rgb(226, 5, 5);
+  --wrapper-width: clamp(320px,100%, 1200px);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.h3{
+  color: #9b6150;
+  font-weight: 700;
+}
+
+body{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.df{
+  display: flex;
+}
+
+.jsb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jcc{
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.App {
+  background-color: #ede6dc;
+  background-repeat: repeat-y;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.w-50{
+  width: 50%;
+}
+.middle-wrapper{
+  width: var(--wrapper-width);
+  margin: auto 20px;
+  background-color: #f5f5f5;
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+}
+
+.middle-wrapper .border-botton{
+  background-color: #fff;
+  
+}
+
+.middle-wrapper .border-botton > div{
+  width: 300px;
+  height: 4px;
+  background-color: #d5ccbd;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 480px)  {
+  .middle-wrapper{
+    padding: 10px;
+  }
+}
+
+.test-wraooer{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

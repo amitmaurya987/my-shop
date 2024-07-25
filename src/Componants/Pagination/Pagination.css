@@ -1,0 +1,39 @@
+:root{
+    --pgn-bgColor: #9b6150;
+    --pgn-bgColor_hover: #9b6150;
+    --pgn-link_color: #fff;
+    --pgn-border-radius: 4px;
+    --pgn-padding-x: 10px;
+    --pgn-padding-y: 4px;
+    --pgn-font-size: 14px;
+    --pgn-gap:10px;
+
+}
+.ocs-jcc {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    gap: var( --pgn-gap);
+    flex-wrap: wrap;
+    font-size: var(--pgn-font-size);
+}
+
+.pagination li {
+    padding: var(--pgn-padding-y) var(--pgn-padding-x);
+    
+    background-color: var(--pgn-bgColor);
+    border-radius: var(--pgn-border-radius);
+    transition: all .3s;
+}
+
+.pagination li:hover {
+    background-color: var(--pgn-bgColor_hover);
+    box-shadow: 0px 0px 4px 1px rgb(0 0 0 / 36%);
+    cursor: pointer;
+}
+
+.pagination li a {
+    color: var(--pgn-link_color);
+}

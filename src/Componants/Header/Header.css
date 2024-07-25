@@ -1,0 +1,260 @@
+header{
+    width: var(--wrapper-width);
+    margin: auto 20px;
+    margin-top: 10px;
+    
+}
+
+.header-top{
+    height: 50px;
+    border-radius: 8px;
+    background-color: #fdfcfc;
+   border-radius: 12px;
+   
+}
+
+header .logo{
+  
+    min-width: 260px;
+    background-color: #86301f;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 40px;
+    border-radius: 8px 0 0 8px;
+}
+
+.navbar{
+    border: .5px solid #000000;
+    flex: 1 1;
+    padding: 0 20px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: inset 0px 0px 14px 6px #efefef;
+    position: relative;
+    
+  
+}
+
+ .navbar ul {
+    justify-content: end;
+    flex: 1 1;
+    gap: 20px;
+
+} 
+
+.navbar ul > li{
+    align-self: center;
+    vertical-align: middle;
+    position: relative;
+}
+.navbar ul >li a{
+    color: #333;
+}
+
+.navbar ul >li a:hover,
+.navbar ul >li a.active{
+     color: #c58877;
+}
+
+.dropdown-menu{
+    position: absolute;
+    top: calc(100% + 4px);
+    width: 160px;
+    color: #8f7b76;
+    font-size: 14px;
+    background-color: #fffdfa;
+    border-top: 4px solid #8e8e8e;
+    border-bottom: 4px solid #8e8e8e;
+    overflow-y: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    z-index: 5;
+}
+.dropdown-menu li a{
+display: block;
+font-weight: 500;
+margin: 0;
+padding: 5px 20px;
+color: #fff;
+border-bottom: 1px solid #bab5b0;
+}
+
+.navbar ul >li:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar ul .dropdown-menu > li:hover a{
+    color: #fff;
+    background: #bab5b0;
+ }
+
+
+ .dropdown-icon{
+    display: none;
+ }
+
+ .header-bottom{
+    position: relative;
+    margin-bottom: 30px;
+
+ }
+
+ .header-bottom > div{
+    height: 40px;
+ }
+
+ .header-bottom-middle{
+    background-color:   #515151;
+    padding: 0 50px;
+    align-items: center;
+    flex: 1 1;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+ }
+.cart-box a{
+  color: #fff;
+  margin: 10px;
+  font-size: 12px;
+}
+
+.cart-box a:hover{
+    text-decoration: underline;
+}
+.cart-box a.active{
+   color:  #38e78e;
+}
+
+
+
+ div.header-bottom-left{
+    
+        width: 63px;
+        height: 71px;
+        border-radius: 50px;
+        position: absolute;
+        top: -1px;
+        left: -34px;
+        background-color: #ede6dc;
+        z-index: 2;
+    
+
+ }
+ div.header-bottom-right{
+    
+        width: 63px;
+        height: 71px;
+        border-radius: 50px;
+        position: absolute;
+        top: -1px;
+        right: -34px;
+        background-color: #ede6dc;
+        z-index: 2;
+ }
+
+ .search input{
+    border: none;
+    border-radius: 4px 0 0 4px;
+    padding: 6px;
+
+ }
+
+ .search button{
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 6px;
+    background-color: #842d1c;
+    color: #fff;
+    cursor: pointer;
+ }
+
+ .search button:hover{
+    background-color: #5f1c0f;
+ }
+
+ .search-icon{
+    display: none;
+    cursor: pointer;
+ }
+
+ .spinner{
+   height: 3px;
+   background-color: #000000;
+ }
+
+ .toggle-menu{
+   width: 24px;
+   margin-left: auto;
+   margin-top: 15px;
+ }
+.spinner-middle{
+   margin: 4px 0;
+}
+
+ @media screen and (max-width:767px){
+
+    header .logo{
+       min-width: 220px;
+    }
+
+    .dropdown-icon{
+        display: block;
+       flex: 1 1;
+      text-align: end;
+       
+     }
+
+     .navbar ul{
+        flex-direction: column;
+       position: absolute;
+       top: 100%;
+       right: 0;
+       width: 200px;
+       border-top: 4px solid #8e8e8e;
+       border-bottom: 4px solid #8e8e8e;
+       padding: 8px 0;
+       background-color: #fff;
+       z-index: 11;
+       gap: 8px;
+       visibility: hidden;
+       opacity: 0;
+     }
+
+     .navbar ul.showMenu{
+      visibility: visible;
+      opacity: 1;
+      width: calc(100vw - 40px);
+     }
+ }
+
+ @media screen and (max-width:570px){
+    
+ .search-icon{
+    display: block;
+ }
+ .search{
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 30px;
+    left: 30px;
+    padding: 10px 20px;
+    background-color: rgba(0 0 0 /70%);
+    
+    display: none;
+ }
+
+ .search.showSearch{
+   display: block;
+ }
+
+ .search input{
+   width: calc(100% - 58px);
+ }
+
+ .cart-box a:first-child{
+   margin-left: 0;
+ }
+
+ }

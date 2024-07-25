@@ -1,0 +1,50 @@
+.input-group{
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.input-group > div{
+    flex: 1 1 260px;
+}
+.billing-field .form-field{
+    margin: 10px 0;
+}
+.input-group.product-Daital{
+   margin-top: 20px;
+}
+.billing-field label{
+    display: block;
+    color: #8f7b76;
+    font-size: 11px;
+}
+
+.billing-field label.term{
+    display: inline;
+    
+}
+
+.billing-field input{
+    width: 100%;
+    padding: 4px 8px;
+    border: 1px solid #8f7b76;
+    border-radius: 2px;
+}
+
+.billing-field input.term{
+    display: inline-block;
+    width: auto;
+}
+
+.billing-field input:focus{
+    outline: none;
+}
+
+.billing-field input.term
+
+.billing-field button{
+    margin: 20px 0;
+}
+
+.ckeckout-wrapper .border-botton{
+ margin: 20px 0;
+}
