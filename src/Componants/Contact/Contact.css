@@ -1,0 +1,27 @@
+
+.contactWrapper > div{
+    gap: 40px;
+    justify-content: space-between;
+}
+.contactWrapper .left,
+.contactWrapper .right{
+width: 50%;
+}
+.contactWrapper .left .form  > div{
+
+ margin-bottom: 15px;
+
+}
+.contactWrapper .left .form  label{
+ display: block;
+ margin-bottom: 10px;
+ font-size: 12px;
+}
+.contactWrapper .left .form  input{
+ width: 100%;
+ padding: 4px 12px;
+}
+.contactWrapper .left .form  textarea{
+ width: 100%;
+ height: 200px;
+}
