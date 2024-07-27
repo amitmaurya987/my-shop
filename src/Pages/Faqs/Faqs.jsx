@@ -9,7 +9,7 @@ import React, { Suspense } from "react";
 
 const LoadablePage = lazy((props) =>{
     console.log(props);
-   return import('../Pagination/Pagination');
+   return import('../../Componants/Pagination/Pagination');
 });
 
 

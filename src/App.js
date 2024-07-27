@@ -2,26 +2,27 @@
 import './App.css';
 
 import Main from './Componants/Main';
-import Home from './Componants/Home/Home';
-import About from './Componants/About/About';
-import Cart from './Componants/Cart/Cart'; 
-import Checkout from './Componants/Checkout/Checkout';
-import Contact from './Componants/Contact/Contact';
-import Faqs from './Componants/Faqs/Faqs';
-import Products from './Componants/Products/Products';
-import Productdetail from './Componants/Productdetail/Productdetail';
-import NotFound from './Componants/NotFound/NotFount';
+
+import About from  './Pages/About/About';
+import Cart from './Pages/Cart/Cart'; 
+import Checkout from './Pages/Checkout/Checkout';
+import Contact from './Pages/Contact/Contact';
+import Faqs from './Pages/Faqs/Faqs';
+import Products from './Pages/Products/Products';
+import Productdetail from './Pages/Productdetail/Productdetail';
+import NotFound from './Pages/NotFound/NotFount';
 
 import Test from './Componants/Test';
 
 import { Routes,Route } from 'react-router-dom';
+import Home from './Pages/Home/Home';
 
 
 function App() {
   return (
   <Routes>
-    <Route path='/' element={<Main />} >
-      <Route index element={ <Home /> } />
+    <Route path='/' element={<Main />} exact >
+      <Route index element={ <Home /> } exact  />
       <Route path='/about' element={ <About  /> } />
       <Route path='/cart' element={ <Cart /> } />
       <Route path='/ckeckout' element={ <Checkout /> } />

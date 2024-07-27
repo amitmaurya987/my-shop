@@ -1,6 +1,7 @@
 import './Products.css';
 import ProductCard from './ProductCard';
-import Pagination from '../Pagination/Pagination';
+import Pagination from '../../Componants/Pagination/Pagination';
+
 
 export default function Products(){
     return(
