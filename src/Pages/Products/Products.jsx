@@ -22,7 +22,7 @@ export default function Products(){
                 </div>
                 <div className='border-botton'><div></div></div>
                 <div className='pd-conainer' >
-                    <Pagination />
+                    {/* <Pagination /> */}
                 </div>
          </>
     )
