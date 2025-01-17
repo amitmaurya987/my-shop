@@ -54,3 +54,11 @@ export const productDepentant = () => {
 	);
 };
 
+
+
+export const getProduct = ()=>{
+	return apiRequest.get(`https://fakestoreapi.com/products`)
+}
+export const getSingaleProduct = (id)=>{
+	return apiRequest.get(`https://fakestoreapi.com/products/${id}`)
+}

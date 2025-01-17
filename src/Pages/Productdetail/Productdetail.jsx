@@ -1,36 +1,51 @@
 import '../Products/Products.css';
 import './Productdetail.css';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import ProductCard from '../Products/ProductCard';
 import P7 from '../../images/07.jpg';
+import { fetchSingalProduct } from '../../store/ProductorFeture/ProductorAction';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 export default function Productdetail(){
+    const dispatch = useDispatch();
+    const { productSingal, loading } = useSelector((state) => state.product);
+    const location = useLocation();
+
+    const queryParams = new URLSearchParams(location.search);
+  
+    const searchQuery = queryParams.get('id')
+
+    
+    useEffect(() => {
+
+        dispatch(fetchSingalProduct(searchQuery)); 
+      }, [dispatch]);
+
+      if(loading) return(<h1>loading</h1>);
     return(
        
             <>
             <div className='pd-conainer productocDaital-wrapper df'>
                 <div className='product-images df'>
                     <div className="Pd-main-img">
-                        <img src={P7} alt="product-img" />
+                        <img src={productSingal?.image} alt="product-img" />
                     </div>
-                    <div className="pd-other-imgs">
+                    {/* <div className="pd-other-imgs">
                         <div ><img src={P7} alt="product-img" /></div>
                         <div ><img src={P7} alt="product-img" /></div>
-                    </div>
+                    </div> */}
                     
                 </div>
                 <div className="product-Daital">
-                    <h1>Product Name</h1>
+                    <h1>{productSingal?.title}</h1>
                     <p className='short-desc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt massa odio.</p>
                     <p className="full-desc">
-                        Donec eget tincidunt felis. Pellentesque et mauris sed eros faucibus consequat et et ante.
-                        Cras sed arcu ut nulla iaculis imperdiet. Donec in est erat, rutrum ullamcorper nisl. Fusce tortor mauris,
-                        accumsan nec viverra nec, elementum et arcu. Vivamus quis sem nisi. Proin nunc mi, tempor ac dictum sit amet,
-                        fermentum ac urna
+                        {productSingal?.description}
                     </p>
                     <div className='product-status'>
-                        <span className="prize">Rs 80</span><span className='Avaliability'>Avaliability:-</span><span className='Avaliability-status'> In stock</span>
+                        <span className="prize">Rs {productSingal?.price}</span><span className='Avaliability'>Avaliability:-</span><span className='Avaliability-status'> In stock</span>
                     </div>
                     <div>
                         <label htmlFor="itemQ" className='Avaliability'> Quantity </label>
